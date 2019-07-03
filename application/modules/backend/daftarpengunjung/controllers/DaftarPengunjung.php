@@ -190,7 +190,8 @@ class DaftarPengunjung extends MY_backend
 
 			$data = $json['daftarpengunjung']['foto_pengunjung'];
 			$size = FileSizeConvert("public/daftarpengunjung_foto_pengunjung/$data");
-			$jsonArray['data'][$index]['daftarpengunjung']['foto_pengunjung']="<img title='$size' width='145px' alt='$data' src='".base_url()."public/daftarpengunjung_foto_pengunjung/$data'>";
+			//Mengganti link foto menjadi tampil gambar di dalam table
+			$jsonArray['data'][$index]['daftarpengunjung']['foto_pengunjung']="<img title='$size' width='140px' alt='$data' src='".base_url()."public/daftarpengunjung_foto_pengunjung/$data'>";
 
 		}
 
